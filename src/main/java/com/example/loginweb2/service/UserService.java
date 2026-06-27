@@ -14,4 +14,24 @@ public class UserService {
         }
         return user.getPassword().equals(password);
     }
+    public boolean register(String username, String password){
+        User currentUser=responsitory.findByUsername(username);
+        if (currentUser != null){
+            return false;
+        }
+        User newUser=new User();
+        newUser.setUsername(username);
+        newUser.setPassword(password);
+        responsitory.save(newUser);
+        return true;
+    }
+    public boolean updatepassword(String username, String newpassword){
+        User user=responsitory.findByUsername(username);
+        if(user==null){
+            return false;
+        }
+        user.setPassword(newpassword);
+        responsitory.save(user);
+        return true;
+    }
 }

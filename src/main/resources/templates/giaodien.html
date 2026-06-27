@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao Diện</title>
+    <link rel="stylesheet" href="giaodien.css">
+</head>
+
+<body>
+<div class="header">
+    <h1>SIGN IN</h1>
+    <!-- thêm đoạn này vào giaodien.html, ngay dưới thẻ <h1>SIGN IN</h1> -->
+    <p th:if="${param.error}" style="color: red;">
+        Sai tên đăng nhập hoặc mật khẩu!
+    </p>
+    <form action="/api/login" method="post">
+        <div class="form">
+            <input type="text" name="username" placeholder="Ten dang nhap">
+            <input type="password" name="password" placeholder="Mat khau">
+        </div>
+        <div class="forget-password">
+            <a href="quenmatkhau">Quên mật khẩu!</a>
+            <a href="dangki">Đăng kí ngay!</a>
+        </div>
+        <button type="submit"> LOGIN </button>
+    </form>
+</div>
+</body>
+
+</html>

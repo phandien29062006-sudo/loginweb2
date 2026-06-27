@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DangKi</title>
+    <link rel="stylesheet" href="giaodien.css">
+    <style>
+        .dangkingay {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 350px;
+            width: 300px;
+            padding: 20px;
+            background-color: #ead9f0;
+            border-radius: 5pc;
+        }
+
+        .dangkingay input {
+            padding: 10px;
+            border-radius: 5pc;
+            border: 2px solid #a33b61;
+        }
+
+        .dangkingay button {
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+            height: 50px;
+            border-radius: 5pc;
+            color: rgb(162, 32, 32);
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+<form action="/api/dangki" method="post">
+<div class="dangkingay">
+    <h1>Đăng kí ngay</h1>
+    <input type="text" name="username" placeholder="nhập tên đăng nhập">
+    <input type="password" name="password" placeholder="nhập mật khẩu">
+    <button type="submit">Đăng kí</button>
+</div>
+</form>
+</body>
+
+
+</html>

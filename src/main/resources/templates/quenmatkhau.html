@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quenmatkhau</title>
+    <link rel="stylesheet" href="giaodien.css">
+    <style>
+        .quenmatkhau {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 350px;
+            width: 300px;
+            padding: 20px;
+            background-color: #ead9f0;
+            border-radius: 5pc;
+        }
+
+        .quenmatkhau input {
+            padding: 10px;
+            border-radius: 5pc;
+            border: 2px solid #a33b61;
+        }
+
+        .quenmatkhau button {
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+            height: 50px;
+            border-radius: 5pc;
+            color: rgb(162, 32, 32);
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+<form action="/api/quenmatkhau" method="post">
+<div class="quenmatkhau">
+    <h1>Quên mật khẩu</h1>
+    <input type="text" name="username" placeholder="nhập tên đăng nhập">
+    <input type="password" name="newpassword" placeholder="nhập mật khẩu mới">
+    <input type="password" name="password" placeholder="nhập lại mật khẩu mới">
+    <button type="submit">Lưu mật khẩu</button>
+</div>
+</form>
+</body>
+
+
+</html>
